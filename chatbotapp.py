@@ -10,6 +10,8 @@ chat_placeholder = st.empty()
 # Using session state to preserve chat history across runs
 if 'messages' not in st.session_state:
     st.session_state['messages'] = []
+if 'context' not in st.session_state:
+    st.session_state['context'] = ""  # Initialize context for each user
 
 # Display the conversation in the chat container
 with chat_placeholder.container():
@@ -27,7 +29,7 @@ if user_input:
     st.session_state['messages'].append({'role': 'user', 'content': user_input})
     
     # Use the handle_conversation function to generate bot response
-    bot_response = handle_conversation(user_input)  # Call the conversation handler here
+    bot_response, st.session_state['context'] = handle_conversation(user_input, st.session_state['context'])  # Pass context
     
     st.session_state['messages'].append({'role': 'bot', 'content': bot_response})
 
