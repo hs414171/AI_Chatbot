@@ -6,7 +6,7 @@ from langchain_core.output_parsers import StrOutputParser
 import dotenv
 dotenv.load_dotenv()
 import os
-secret_key=os.environ['SECRET_KEY']
+
 
 
 

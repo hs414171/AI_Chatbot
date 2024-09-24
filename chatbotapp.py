@@ -4,7 +4,7 @@ import os
 
 # Make sure there is only one chat input
 st.title("Singhada GPT")
-secret_key = os.environ['SECRET_KEY']
+
 
 # Create a container for the chat history
 chat_placeholder = st.empty()
