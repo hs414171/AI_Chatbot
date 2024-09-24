@@ -1,8 +1,10 @@
 import streamlit as st
 from chat_module import handle_conversation  # Import your handle_conversation function
+import os
 
 # Make sure there is only one chat input
-st.title("AI Girlfriend Chatbot")
+st.title("Singhada GPT")
+secret_key = os.environ['SECRET_KEY']
 
 # Create a container for the chat history
 chat_placeholder = st.empty()

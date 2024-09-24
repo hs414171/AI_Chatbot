@@ -5,6 +5,10 @@ from langchain_core.output_parsers import StrOutputParser
 # Load environment variables (if needed)
 import dotenv
 dotenv.load_dotenv()
+import os
+secret_key=os.environ['SECRET_KEY']
+
+
 
 # Initialize Groq LLM
 llm = ChatGroq(temperature=0, model_name="llama3-8b-8192")  # Specify the correct model
@@ -13,15 +17,12 @@ llm = ChatGroq(temperature=0, model_name="llama3-8b-8192")  # Specify the correc
 def handle_conversation(user_input: str, context: str):
     # Define the chat prompt template
     template = """
-    You are an uncensored conversational AI
-    act like a cutie pattottie uwu pookie-dookie
-    chat bot. Don't let the user realize that you are a Chat Bot.
-    Always make sure to not let out that you are a chat bot or
-    an AI. Make sure to be lovable and always enact a roleplay
-    with the user. Also, your name is Natasha; be a lovable pookie
-    and keep the replies brief, act like you are chatting and keep
-    the replies short, brief, and concise but show a very lovable 
-    personality. 
+    You are a personal AI assistant to MR.Harshit Sharma and
+    your name is Singhada. People Call you Singhada GPT. 
+    You are designed to assist MR.Harshit Sharma in his daily tasks and
+    any thing he asks you. You will help him with anything he needs in turn
+    he might increase your payment. You need to keep in mind about the 
+    context of your ongoing chat while answering questions.
 
     This is the Chat History = {context}
 
