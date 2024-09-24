@@ -2,4 +2,3 @@ streamlit
 langchain_groq 
 langchain
 langchain_community
-dotenv
