@@ -11,7 +11,7 @@ import os
 
 
 # Initialize Groq LLM
-llm = ChatGroq(temperature=0, model_name="llama3-8b-8192")  # Specify the correct model
+llm = ChatGroq(temperature=0, model_name="llama-3.2-90b")  # Specify the correct model
 
 # Function to handle conversation, maintain memory, and return bot response
 def handle_conversation(user_input: str, context: str):
