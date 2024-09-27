@@ -3,7 +3,7 @@ from chat_module import handle_conversation  # Import your handle_conversation f
 import os
 
 # Make sure there is only one chat input
-st.title("Singhada GPT")
+st.title("Asist GPT")
 
 
 # Create a container for the chat history
