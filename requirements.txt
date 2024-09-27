@@ -2,3 +2,8 @@ streamlit
 langchain_groq 
 langchain
 langchain_community
+bs4
+cassio
+tiktoken
+langgraph
+langchain_huggingface
