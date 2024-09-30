@@ -3,7 +3,27 @@ from rag_helper.class_helper import GraphState
 import dotenv
 from langchain.schema import Document
 dotenv.load_dotenv()
-
+def web_search(state):
+    """
+    Web search based based on the question
+    Args:
+        state (dict): The current graph state
+    Returns:
+        state (dict): Appended web results to documents
+    """
+    print("---WEB SEARCH---")
+    question = state["question"]
+    documents = []
+    # Web search
+    web_tool = web_search_tool()
+    docs = web_tool.invoke(question)
+    web_results = "\n".join([d["content"] for d in docs])
+    web_results = Document(page_content=web_results)
+    if documents is not None:
+        documents.append(web_results)
+    else:
+        documents = [web_results]
+    return {"documents": documents, "question": question}
 
 def retrieve(state):
     """
@@ -75,27 +95,7 @@ def grade_documents(state):
             continue
     return {"documents": filtered_docs, "question": question, "web_search": web_search}
 
-def web_search(state):
-    """
-    Web search based based on the question
-    Args:
-        state (dict): The current graph state
-    Returns:
-        state (dict): Appended web results to documents
-    """
-    print("---WEB SEARCH---")
-    question = state["question"]
-    documents = state["documents"]
-    # Web search
-    web_tool = web_search_tool()
-    docs = web_tool.invoke({"query": question})
-    web_results = "\n".join([d["content"] for d in docs])
-    web_results = Document(page_content=web_results)
-    if documents is not None:
-        documents.append(web_results)
-    else:
-        documents = [web_results]
-    return {"documents": documents, "question": question}
+
 
 def route_question(state):
     """

@@ -1,5 +1,22 @@
-# from rag_helper.methods import handle_db , retriever_grader , hallucinator , answer_grader , router , initiate_retriever , generator , web_search_tool
+from rag_helper.methods import handle_db
 from rag_helper.graph_workflow import set_workflow
+from pprint import pprint
+
+
+def handle_rag(url: str = " ", question : str = " "):
+    if url != " ":
+        retriever = handle_db(url)
+
+    workflow = set_workflow()
+    app = workflow.compile()
+    inputs = {"question": "What is an agent"}
+    for output in app.stream(inputs):
+        for key, value in output.items():
+            pprint(f"Finished running: {key}:")
+
+    return value["generation"]
+    
+
 
 
 
@@ -22,8 +39,8 @@ if __name__ == "__main__":
     app = workflow.compile()
 
     # Test
-    from pprint import pprint
-    inputs = {"question": "who is elvish yadav"}
+    
+    inputs = {"question": "What is an agent"}
     for output in app.stream(inputs):
         for key, value in output.items():
             pprint(f"Finished running: {key}:")
