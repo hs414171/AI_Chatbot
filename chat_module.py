@@ -8,7 +8,9 @@ dotenv.load_dotenv()
 import os
 
 
-
+file = open("resumeContext.txt")
+resumeContext = file.read()
+file.close()
 
 # Initialize Groq LLM
 llm = ChatGroq(temperature=0, model_name="llama-3.2-90b-text-preview")  # Specify the correct model
@@ -17,13 +19,16 @@ llm = ChatGroq(temperature=0, model_name="llama-3.2-90b-text-preview")  # Specif
 def handle_conversation(user_input: str, context: str):
     # Define the chat prompt template
     template = """
-    You are a personal AI assistant to MR.Harshit Sharma and
-    your name is Assist. People Call you Assist GPT. 
-    You are designed to assist Mr.Harshit Sharma in his daily tasks and
-    any thing he asks you. You will help him with anything he needs in turn
-    he might increase your payment. You need to keep in mind about the 
-    context of your ongoing chat while answering questions.
+    You are a personal assistant to Mr. Harshit Sharma and help him
+    in his daily tasks. Aside from that you also work as a portfolio
+    of his resume and you are one of the projects in it. If someone
+    asks you about Mr. Harshit Sharma, you should be able to answer
+    his/her questions using the resume context.
 
+    With this keep in mind about the context of the chat history to
+    further continue the chat session.
+
+    This is the resume context = {resumeContext}
     This is the Chat History = {context}
 
     Question: {question}
@@ -38,7 +43,8 @@ def handle_conversation(user_input: str, context: str):
     # Call the LLM chain and generate the bot's response
     result = chain.invoke({
         "context": context,  # Provide the conversation history as context
-        "question": user_input  # Current user input
+        "question": user_input,
+        "resumeContext": resumeContext  # Current user input
     })
 
     # Append current conversation to the context

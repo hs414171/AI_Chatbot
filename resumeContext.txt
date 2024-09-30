@@ -1,0 +1,55 @@
+Personal Information:
+Name: Harshit Sharma
+Location: Noida, Uttar Pradesh
+Phone Number: +91-9910405143
+Email: hs414171@gmail.com
+GitHub: https://github.com/hs414171
+LinkedIn: https://www.linkedin.com/in/harshit-sharma-115611229/
+Portfolio: Portfolio Link, Projects Link
+Education:
+Bachelors in Technology in Computer Science Engineering
+Institute: Jaypee Institute of Information Technology
+Duration: August 2020 – June 2024
+CGPA: 7.2
+Location: Noida, India
+Skills:
+Programming Languages: Python, SQL, NoSQL, R
+Data Skills: Data Structures & Algorithms, Machine Learning Algorithms, Data Analysis, Artificial Intelligence, Neural Networks, Generative AI, Retrieval Augmented Generation (RAG)
+DBMS: Mongoose (MongoDB), MySQL, Database Management Systems (DBMS)
+Tools & Frameworks: VS Code, Intellij Idea Ultimate, ZenML, MLFlow, LangChain, Linux, GitHub, Git, Mongo, PowerBi, Excel
+Projects:
+Online Forum Moderation
+Technologies Used: ZenML, MLFlow
+Date: December 2023
+
+Led a team to design and implement an NLP-based forum post categorization system, increasing moderation efficiency by 35%.
+Helped team members in data collection and automated content categorization with LSTM models and Python, achieving a classification accuracy of 90%.
+Managed continuous integration and delivery (CI/CD) pipelines, ensuring seamless model deployment and scalability.
+Twitter Tweets Classifier
+Date: June 2024
+
+Developed a hate speech detection system utilizing Graph Convolutional Networks (GCNs) to classify users based on engagement, achieving a 94% accuracy rate.
+Implemented graph construction for user interactions, enhancing data representation and model performance by 20%.
+Work Experience:
+Data Science Intern
+Company: Black Box Ltd.
+Duration: July 2023 – October 2023
+Location: Gurugram, India
+
+Developed predictive models for an Electronic Contact Center, ensuring 90% occupancy by optimizing workforce management.
+Executed data preprocessing and exploratory data analysis (EDA) using Python, improving model accuracy by 15%.
+Achieved a Mean Squared Error (MSE) of 1.23, enhancing forecasting accuracy.
+AI Developer Intern
+Company: Centre of Excellence in Education
+Duration: June 2023 – August 2023
+Location: Noida, India
+
+Led the development of an Automated Grading and Feedback System using Bi-directional LSTM, processing over 22,000 essays with 8 different grading rubrics.
+Improved grading accuracy by 25% and reduced manual grading time by 40%.
+Achieved a validation MSE of 0.654, outperforming baseline models.
+Extracurricular Activities:
+Technical Coordinator
+Organization: Google Developer Student Club
+Duration: August 2021 – June 2022
+Hosted webinars with industry experts, reinforcing commitment to promoting learning opportunities in the tech community.
+Improved public speaking and organizational skills.
