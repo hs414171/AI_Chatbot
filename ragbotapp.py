@@ -11,6 +11,8 @@ def main():
     if st.button("Submit"):
         if question:
             # Run RAG pipeline
+            if not url:
+                url = " "
             result = handle_rag(url, question)
             # Display the result
             st.subheader("Generated Answer:")

@@ -5,7 +5,6 @@ import cassio
 import os
 import dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_groq import ChatGroq
