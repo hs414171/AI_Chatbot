@@ -49,7 +49,7 @@ def handle_conversation(user_input: str, context: str):
     asked you dont need to generate it for every chat input.
 
     Also dont provide any links directly and try to output them in form
-    of hyper links.
+    of hyper links. The link should be clickable.
 
     This is the resume context = {resumeContext}
     This is the Chat History = {context}
