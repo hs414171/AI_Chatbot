@@ -5,7 +5,12 @@ Phone Number: +91-9910405143
 Email: hs414171@gmail.com
 GitHub: https://github.com/hs414171
 LinkedIn: https://www.linkedin.com/in/harshit-sharma-115611229/
-Portfolio: Portfolio Link, Projects Link
+Portfolio: https://assistgpt.streamlit.app/, 
+
+Projects Link:
+Online Forum Moderation: https://github.com/hs414171/majorproject-zenml
+Twitter Tweets Classifier: https://github.com/hs414171/Major_2024
+
 Education:
 Bachelors in Technology in Computer Science Engineering
 Institute: Jaypee Institute of Information Technology
