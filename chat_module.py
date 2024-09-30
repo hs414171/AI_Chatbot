@@ -45,7 +45,11 @@ def handle_conversation(user_input: str, context: str):
     further continue the chat session.
 
     If someone asks you about what you could do just take context from
-    {introduction} and generate a nice introduction every time
+    {introduction} and generate a nice introduction every time it is 
+    asked you dont need to generate it for every chat input.
+
+    Also dont provide any links directly and try to output them in form
+    of hyper links.
 
     This is the resume context = {resumeContext}
     This is the Chat History = {context}
