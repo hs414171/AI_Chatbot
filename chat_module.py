@@ -67,7 +67,8 @@ def handle_conversation(user_input: str, context: str):
     result = chain.invoke({
         "context": context,  # Provide the conversation history as context
         "question": user_input,
-        "resumeContext": resumeContext  # Current user input
+        "resumeContext": resumeContext,
+        "introduction": introduction,  # Current user input
     })
 
     # Append current conversation to the context
