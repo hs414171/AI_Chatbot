@@ -6,7 +6,7 @@ Email: hs414171@gmail.com
 GitHub: https://github.com/hs414171
 LinkedIn: https://www.linkedin.com/in/hs414171/
 Portfolio: https://assistgpt.streamlit.app/, 
-Resume Link : https://drive.google.com/file/d/1OlIQiIzoLByeUB15U1Z54sTRD6ZTHH7O/view
+Resume Link : https://drive.google.com/file/d/10ZXwIMOMVi5Cvly7nIStfdoc-5rTHWYs/view?usp=sharing
 
 Projects Link:
 Online Forum Moderation: https://github.com/hs414171/majorproject-zenml
