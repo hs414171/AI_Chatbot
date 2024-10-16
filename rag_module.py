@@ -1,12 +1,9 @@
-from rag_helper.methods import handle_db
+
 from rag_helper.graph_workflow import set_workflow
 from pprint import pprint
 
 
-def handle_rag(url: str = " ", question : str = " "):
-    if url != " ":
-        retriever = handle_db(url)
-
+def handle_rag(question : str = " "):
     workflow = set_workflow()
     app = workflow.compile()
     inputs = {"question": question}

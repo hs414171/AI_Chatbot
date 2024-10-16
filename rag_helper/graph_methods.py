@@ -1,4 +1,4 @@
-from rag_helper.methods import handle_db , retriever_grader , hallucinator , answer_grader , router , initiate_retriever , generator , web_search_tool
+from rag_helper.methods import retriever_grader , hallucinator , answer_grader , router , initiate_retriever , generator , web_search_tool
 from rag_helper.class_helper import GraphState
 import dotenv
 from langchain.schema import Document

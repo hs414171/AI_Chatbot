@@ -33,7 +33,7 @@ def format_docs(docs):
 def initiate_retriever():
     astra_vector_store = Cassandra(
         embedding=embeddings,
-        table_name="qa_mini_demo",
+        table_name="Document_Store",
         session=None,
         keyspace=None,
     )
