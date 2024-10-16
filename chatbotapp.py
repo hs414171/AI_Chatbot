@@ -2,6 +2,7 @@ import streamlit as st
 from chat_module import handle_conversation
 from rag_helper.pdf_helper import pdf_help
 from rag_helper.methods import url_help # Import your chat and PDF processing functions
+from rag_module import handle_rag
 import os
 
 
@@ -10,9 +11,10 @@ def main():
     st.title("Assist GPT")
 
     # Sidebar for URL input (optional for this example)
-    st.sidebar.header("Add Page URL (Optional)")
+    st.sidebar.header("Adaptive RAG")
     url_input = st.sidebar.text_input("Enter Page URL")
     url_submit = st.sidebar.button("Submit URL")
+
     if url_submit:
         url = url_input
         url_help(url)
@@ -44,7 +46,16 @@ def main():
             st.success("PDF file uploaded, processed, and deleted successfully!")
         except OSError as e:
             st.error(f"Error deleting file: {e}")
-
+    question = st.sidebar.text_input("Enter your question:", "")
+    
+    if st.sidebar.button("Submit"):
+        if question:
+            result = handle_rag(question)
+            # Display the result
+            st.sidebar.subheader("Generated Answer:")
+            st.sidebar.write(result)
+        else:
+            st.sidebar.warning("Please enter a question.")
     # Chat conversation management
     # Using session state to preserve chat history across runs
     if 'messages' not in st.session_state:
