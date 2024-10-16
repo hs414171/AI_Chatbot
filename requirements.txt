@@ -3,6 +3,7 @@ langchain_groq
 langchain
 langchain_community
 bs4
+pypdf
 cassio
 tiktoken
 langgraph
