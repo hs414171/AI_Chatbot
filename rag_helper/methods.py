@@ -41,7 +41,7 @@ def initiate_retriever():
     return retriever
 
      
-def handle_db(url):
+def url_help(url):
     doc = WebBaseLoader(url).load()
     text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
         chunk_size=500,
@@ -51,13 +51,12 @@ def handle_db(url):
     docs_split = text_splitter.split_documents(doc)
     astra_vector_store = Cassandra(
         embedding=embeddings,
-        table_name="qa_mini_demo",
+        table_name="Document_Store",
         session=None,
         keyspace=None,
     )
     astra_vector_store.add_documents(docs_split)
-    retriever = initiate_retriever()
-    return retriever
+
 
 def retriever_grader(retriever,question):
     
