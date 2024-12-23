@@ -29,7 +29,7 @@ It is a pleasure to meet you.
 """
 
 # Initialize Groq LLM
-llm = ChatGroq(temperature=0, model_name="llama-3.2-90b-text-preview")  # Specify the correct model
+llm = ChatGroq(temperature=0, model_name="llama-3.3-70b-specdec")  # Specify the correct model
 
 # Function to handle conversation, maintain memory, and return bot response
 def handle_conversation(user_input: str, context: str):
